@@ -1,7 +1,9 @@
+const { WWW_DOMAIN } = process.env
+
 const { combineEffects, combineEffectsInSeries, html, mapEffect, preventDefault, redirect } = require('./helpers')
 const contactForm = require('./views/contact-form')
 const { logError } = require('./effects/error')
-const footer = require('./views/footer')
+const footer = require('./views/'+WWW_DOMAIN+'/footer')
 const loadingIndicator = require('./views/activity-indicator')
 const navbar = require('./views/navbar')
 const notFoundPage = require('./views/not-found-page')

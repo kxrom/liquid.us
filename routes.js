@@ -1,6 +1,8 @@
+const { WWW_DOMAIN } = process.env
+
 module.exports = {
   'not-found': () => import('./views/not-found-page'),
-  '/': () => import('./views/home-page'),
+  '/': () => import('./views/'+WWW_DOMAIN+'/home-page'),
   '/join': () => import('./views/join-page'),
   '/sign_in': () => import('./views/sign-in-page'),
   '/sign_in/verify': () => import('./views/verify-otp-page'),

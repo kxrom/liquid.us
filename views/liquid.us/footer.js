@@ -1,5 +1,5 @@
 const { APP_NAME } = process.env
-const { html } = require('../helpers')
+const { html } = require('../../helpers')
 
 module.exports = ({ randomQuote }) => {
   return html`

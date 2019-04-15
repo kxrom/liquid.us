@@ -1,8 +1,8 @@
 const { APP_NAME, WWW_DOMAIN } = process.env
-const { html } = require('../helpers')
-const joinForm = require('./join-form')
-const yourLegislators = require('./your-legislators')
-const video = require('./video')
+const { html } = require('../../helpers')
+const joinForm = require('../join-form')
+const yourLegislators = require('../your-legislators')
+const video = require('../video')
 
 module.exports = (state, dispatch) => {
   return html`
