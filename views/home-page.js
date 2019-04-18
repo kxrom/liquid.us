@@ -13,7 +13,7 @@ module.exports = (state, dispatch) => {
     <section onconnected="${activateScrollReveal}" class="hero is-link is-bold is-fullheight subtract-toolbar">
       <div class="hero-body">
         <div class="container reveal">
-          <h2 class="title is-2 is-size-1-desktop is-size-3-mobile delayed">The Most Powerful Way to Advocate for Your Community</h2>
+          <h2 class="title is-2 is-size-1-desktop is-size-3-mobile delayed">${__('Hello')} The Most Powerful Way to Advocate for Your Community</h2>
           <br />
           <br />
           <h3 class="subtitle is-3 is-size-4-mobile delayed1">Built for the legislative process</h3>

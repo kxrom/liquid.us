@@ -11,6 +11,7 @@ const compression = require('compression')
 const cors = require('cors')
 const cookieParser = require('cookie-parser')
 const express = require('express')
+const i18n = require("i18n"); // load i18n module
 const MemoryFS = require('memory-fs')
 const resolveFrom = require('resolve-from')
 const serveStatic = require('serve-static')
@@ -70,6 +71,13 @@ const config = {
   NODE_ENV: process.env.NODE_ENV,
   WWW_URL: process.env.WWW_URL,
 }
+
+i18n.configure({
+    locales:['en', 'fr', 'de'],
+    defaultLocale: 'fr',
+    directory: __dirname + '/locales'
+})
+console.log('i18n configured: "Hello" is "'+i18n.__('Hello')+'" in '+i18n.getLocale()+".")
 
 const statsOptions = {
   assets: false,
@@ -169,6 +177,7 @@ function startAppServer() {
       })
     })
     .use(cookieParser(), serveApp)
+    .use(i18n.init) // i18n init parses req for language headers, cookies, etc.
     .use(errorHandler(htmlWrapper))
     .listen(port, () => {
       console.log(`App ready and listening on http://localhost:${port}`)
