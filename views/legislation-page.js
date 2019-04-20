@@ -138,7 +138,7 @@ const addAddressNotification = (geoip = {}, user) => {
   return html`
     <p class="help">
       We guessed your location is <strong>${geoip.city}, ${geoip.regionName}.</strong><br />
-      But this is only an approximation. <strong><a href="${user ? '/get_started/basics' : '/join'}">${user ? 'Go here' : 'Join'} to set your address</a></strong>.
+      But this is only an approximation. <strong><a href="${user ? '/get_started/basics' : '/join'}">${user ? 'Go here' : 'Rejoindre'} to set your address</a></strong>.
     </p>
   `
 }
@@ -153,18 +153,18 @@ const makeFilterQuery = (order, query) => {
 const filterTabs = ({ geoip, legislatures, location, cookies, user }, dispatch) => {
   const { query } = location
   const orderDescriptions = {
-    upcoming: "Bills upcoming for a vote in the legislature.",
-    new: 'Bills recently introduced.',
-    proposed: `Bills introduced on ${APP_NAME}`,
+    upcoming: "Les projets de loi seront soumis au vote de l'Assemblée législative.",
+    new: 'Les projets de loi récemment introduits.',
+    proposed: `Projets introduits sur l'assemblée liquide.`,
   }
 
   return html`
     <div>
       <div class="tabs">
         <ul>
-          <li class="${!query.order || query.order === 'upcoming' ? 'is-active' : ''}"><a href="${`/legislation?${makeFilterQuery('upcoming', query)}`}">Upcoming for vote</a></li>
-          <li class="${query.order === 'new' ? 'is-active' : ''}"><a href="${`/legislation?${makeFilterQuery('new', query)}`}">Recently introduced</a></li>
-          <li class="${query.order === 'proposed' ? 'is-active' : ''}"><a href="${`/legislation?${makeFilterQuery('proposed', query)}`}">Introduced on ${APP_NAME}</a></li>
+          <li class="${!query.order || query.order === 'upcoming' ? 'is-active' : ''}"><a href="${`/legislation?${makeFilterQuery('upcoming', query)}`}">Prochains scrutins</a></li>
+          <li class="${query.order === 'new' ? 'is-active' : ''}"><a href="${`/legislation?${makeFilterQuery('new', query)}`}">Nouveaux projets de loi</a></li>
+          <li class="${query.order === 'proposed' ? 'is-active' : ''}"><a href="${`/legislation?${makeFilterQuery('proposed', query)}`}">Projets de l'assemblée liquide</a></li>
         </ul>
       </div>
       <div class="columns">

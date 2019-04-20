@@ -10,9 +10,9 @@ module.exports = (state, dispatch) => {
     <div>
       <div class="tabs">
         <ul>
-          <li class=${tab === 'search' ? 'is-active' : ''}><a href=${`${path}?tab=search`}>Search by Name</a></li>
-          <li class=${tab === 'email' ? 'is-active' : ''}><a href=${`${path}?tab=email`}>Invite by Email</a></li>
-          <li class=${tab === 'twitter' ? 'is-active' : ''}><a href=${`${path}?tab=twitter`}>Invite by Twitter</a></li>
+          <li class=${tab === 'search' ? 'is-active' : ''}><a href=${`${path}?tab=search`}>Recherche de profils</a></li>
+          <li class=${tab === 'email' ? 'is-active' : ''}><a href=${`${path}?tab=email`}>Invitation par courriel</a></li>
+          <li class=${tab === 'twitter' ? 'is-active' : ''}><a href=${`${path}?tab=twitter`}>Invitation par Twitter</a></li>
         </ul>
       </div>
       ${tab === 'email' ? addProxyByEmailForm(state, dispatch) : []}
@@ -27,7 +27,7 @@ const addProxyByEmailForm = (state, dispatch) => {
 
   return html`
     <form method="POST" onsubmit=${handleForm(dispatch, { type: 'proxy:addedProxyViaEmail' })}>
-      <label for="add_proxy[search]" class="label has-text-weight-normal">Proxy to someone not on ${APP_NAME} via email:</label>
+      <label for="add_proxy[search]" class="label has-text-weight-normal">Donnez procuration à quelqu'un qui n'a pas encore de profil par e-mail :</label>
       <div class="field is-horizontal">
         <div class="field-body">
           <div class="field">
@@ -69,7 +69,7 @@ const addProxyByTwitterForm = (state, dispatch) => {
   const { error } = state
   return html`
     <form method="POST" onsubmit=${handleForm(dispatch, { type: 'proxy:addedProxyViaTwitter' })}>
-      <label for="add_proxy[search]" class="label has-text-weight-normal">Proxy to someone not on ${APP_NAME} by adding their Twitter username:</label>
+      <label for="add_proxy[search]" class="label has-text-weight-normal">Donnez procuration à quelqu'un en ajoutant son nom d'utilisateur Twitter :</label>
       <div class="field is-horizontal">
         <div class="field-body">
           <div class="field is-grouped">

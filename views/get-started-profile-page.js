@@ -38,7 +38,7 @@ module.exports = (state, dispatch) => {
                   <a class="button has-text-grey" href="/get_started?skip=t">Skip</a>
                 </div>
                 <div class="control">
-                  <button class="button is-primary" type="submit">Next</button>
+                  <button class="button is-primary" type="submit">Suivant</button>
                 </div>
               </div>
               <p class="has-text-right has-text-grey">

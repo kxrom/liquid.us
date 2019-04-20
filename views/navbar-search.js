@@ -10,7 +10,7 @@ module.exports = ({ loading, query, results, showResults }, dispatch) => {
               onfocus=${(event) => dispatch({ type: 'inputFocused', event })}
               onblur=${(event) => dispatch({ type: 'blurred', event })}
               onkeyup=${(event) => dispatch({ type: 'inputChanged', event })}
-              class="input" placeholder="Search Bills or People" />
+              class="input" placeholder="Recherche de projets de loi ou de personnes" />
             <span class="icon is-left">
               <i class="fa fa-search"></i>
             </span>

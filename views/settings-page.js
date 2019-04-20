@@ -11,7 +11,7 @@ module.exports = ({ error, forms: { settings }, user }, dispatch) => {
   return html`
     <section class="section">
       <div class="container is-widescreen">
-        <h2 class="title is-5">Settings</h2>
+        <h2 class="title is-5">Paramètres</h2>
         <form method="POST" onsubmit=${handleForm(dispatch, { type: 'user:settingsSaved' })} onchange=${handleForm(dispatch, { type: 'user:settingsFormChanged' })}>
           <div class="field">
             <h3 class="title is-6 is-marginless">Notifications</h3>

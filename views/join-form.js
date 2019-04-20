@@ -73,7 +73,7 @@ module.exports = ({ cookies, error, loading, location, profiles = {}, usersCount
                   <button class="${`button is-primary ${loading.signIn ? 'is-loading' : ''}`}" disabled=${loading.signIn} type="submit"><strong>Create Account</strong></button>
                 </div>
                 <div class="is-hidden-desktop">
-                  <button class="${`button is-primary ${loading.signIn ? 'is-loading' : ''}`}" disabled=${loading.signIn} type="submit"><strong>Join</strong></button>
+                  <button class="${`button is-primary ${loading.signIn ? 'is-loading' : ''}`}" disabled=${loading.signIn} type="submit"><strong>Rejoindre</strong></button>
                 </div>
               </div>
             </div>

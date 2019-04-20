@@ -13,19 +13,19 @@ module.exports = (state, dispatch) => {
     <section onconnected="${activateScrollReveal}" class="hero is-link is-bold is-fullheight subtract-toolbar">
       <div class="hero-body">
         <div class="container reveal">
-          <h2 class="title is-2 is-size-1-desktop is-size-3-mobile delayed">The Most Powerful Way to Advocate for Your Community</h2>
+          <h2 class="title is-2 is-size-1-desktop is-size-3-mobile delayed">L'assemblée la plus puissante pour défendre l'intérêt général et la séparation des pouvoirs</h2>
           <br />
           <br />
-          <h3 class="subtitle is-3 is-size-4-mobile delayed1">Built for the legislative process</h3>
-          <h4 class="subtitle is-3 is-size-4-mobile delayed1">Easily invite your community to support your position</h4>
-          <h4 class="subtitle is-3 is-size-4-mobile delayed1">Address verification so reps hear their constituents</h4>
+          <h3 class="subtitle is-3 is-size-4-mobile delayed1">Une assemblée plus intelligente et moins corruptible</h3>
+          <h4 class="subtitle is-3 is-size-4-mobile delayed1">Conçue pour le processus législatif</h4>
+          <h4 class="subtitle is-3 is-size-4-mobile delayed1">Invitez facilement votre communauté à soutenir votre position</h4>
           <br />
           <br />
           <div class="delayed2 has-text-centered-mobile">
             ${!state.user ? html`
               <a class="button is-link is-inverted is-medium" href="/join">
                 <span class="icon"><i class="fa fa-star"></i></span>
-                <span><strong>Create your free account</strong></span>
+                <span><strong>Créez votre compte</strong></span>
               </a>
             ` : ''}
           </div>

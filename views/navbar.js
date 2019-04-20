@@ -77,9 +77,9 @@ const style = `
 const navbarAnon = ({ location }) => {
   const { path } = location
   return html`
-    <a class=${`navbar-item ${path.slice(0, 12) === '/legislation' ? 'is-active' : ''}`} href="/legislation">Legislation</a>
-    <a class=${`navbar-item has-text-link has-text-weight-bold ${path === '/join' ? 'is-active' : ''}`} href="/join">Join</a>
-    <a class=${`navbar-item ${path.slice(0, 8) === '/sign_in' ? 'is-active' : ''}`} href="/sign_in">Sign in</a>
+    <a class=${`navbar-item ${path.slice(0, 12) === '/legislation' ? 'is-active' : ''}`} href="/legislation">Législation</a>
+    <a class=${`navbar-item has-text-link has-text-weight-bold ${path === '/join' ? 'is-active' : ''}`} href="/join">Rejoindre</a>
+    <a class=${`navbar-item ${path.slice(0, 8) === '/sign_in' ? 'is-active' : ''}`} href="/sign_in">Se connecter</a>
   `
 }
 
@@ -88,23 +88,23 @@ const navbarAuthed = ({ location, user }) => {
   const { path } = location
 
   return html`
-    <a class=${`navbar-item ${path.slice(0, 12) === '/legislation' ? 'is-active' : ''}`} href="/legislation">Legislation</a>
-    <a class=${`navbar-item ${path.slice(0, 8) === '/proxies' ? 'is-active' : ''}`} href="/proxies">Your Proxies</a>
+    <a class=${`navbar-item ${path.slice(0, 12) === '/legislation' ? 'is-active' : ''}`} href="/legislation">Législation</a>
+    <a class=${`navbar-item ${path.slice(0, 8) === '/proxies' ? 'is-active' : ''}`} href="/proxies">Vos procurations</a>
     <div class="navbar-item has-dropdown is-hoverable">
-      <a class="navbar-link" href="${username_url}">${user.first_name || 'You'}</a>
+      <a class="navbar-link" href="${username_url}">${user.first_name || 'Vous'}</a>
       <div class="navbar-dropdown is-right">
         ${
           !user.verified
-            ? html`<a class="${`navbar-item ${path.slice(0, 12) === '/get_started' ? 'is-active' : ''}`}" href="/get_started">Verify your identity</a>`
+            ? html`<a class="${`navbar-item ${path.slice(0, 12) === '/get_started' ? 'is-active' : ''}`}" href="/get_started">Vérifiez votre identité</a>`
             : ''
         }
-        <a class=${`navbar-item ${path === username_url ? 'is-active' : ''}`} href=${username_url}>Profile</a>
+        <a class=${`navbar-item ${path === username_url ? 'is-active' : ''}`} href=${username_url}>Profil</a>
         ${user.username
           ? html`<a class=${`navbar-item ${path === '/edit_profile' ? 'is-active' : ''}`} href="/edit_profile">Edit Profile</a>`
           : ''}
-        <a class=${`navbar-item ${path === `/legislation/yours` ? 'is-active' : ''}`} href="/legislation/yours">Proposed Legislation</a>
-        <a class=${`navbar-item ${path === '/settings' ? 'is-active' : ''}`} href="/settings">Settings</a>
-        <a class=${`navbar-item ${path === '/sign_out' ? 'is-active' : ''}`} href=${`${WWW_URL}/sign_out`}>Sign out</a>
+        <a class=${`navbar-item ${path === `/legislation/yours` ? 'is-active' : ''}`} href="/legislation/yours">Vos propositions</a>
+        <a class=${`navbar-item ${path === '/settings' ? 'is-active' : ''}`} href="/settings">Paramètres</a>
+        <a class=${`navbar-item ${path === '/sign_out' ? 'is-active' : ''}`} href=${`${WWW_URL}/sign_out`}>Se déconnecter</a>
       </div>
     </div>
   `

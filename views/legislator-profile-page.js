@@ -13,12 +13,12 @@ module.exports = (state, dispatch) => {
       <div class="container is-widescreen">
         ${isMyRep && !user ? html`
           <div class="notification is-info has-text-centered">
-            This looks like one of your reps. <a href="/join"><strong>Join ${APP_NAME}</strong></a> to begin holding them accountable.
+            This looks like one of your reps. <a href="/join"><strong>Rejoignez ${APP_NAME}</strong></a> to begin holding them accountable.
           </div>
         ` : []}
         ${isMyRep && user && !user.verified ? html`
           <div class="notification is-dark has-text-centered">
-            This is one of your reps. <a href="/get_started"><strong>Verify your identity</strong></a> to begin holding them accountable.
+            This is one of your reps. <a href="/get_started"><strong>Vérifiez votre identité</strong></a> to begin holding them accountable.
           </div>
         ` : []}
         ${proxied_name ? html`

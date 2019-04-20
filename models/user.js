@@ -45,7 +45,7 @@ module.exports = (event, state) => {
           return [{
             ...state,
             loading: { page: true },
-            location: { ...state.location, title: 'Settings' },
+            location: { ...state.location, title: 'Paramètres' },
           }, fetchSettings(state.user)]
         case '/settings/unsubscribe':
           return [{

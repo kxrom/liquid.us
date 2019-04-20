@@ -54,7 +54,7 @@ module.exports = ({ error, loading, location, user }, dispatch) => {
             </div>
             <div class="field">
               <div class="control">
-                <button class="${`button is-primary ${loading.user ? 'is-loading' : ''}`}" disabled=${!!loading.user} type="submit">Next</button>
+                <button class="${`button is-primary ${loading.user ? 'is-loading' : ''}`}" disabled=${!!loading.user} type="submit">Suivant</button>
               </div>
             </div>
             <p class="help is-small has-text-grey">All of your information is kept strictly private.</p>

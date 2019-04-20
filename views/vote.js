@@ -43,7 +43,7 @@ module.exports = (state, dispatch) => {
           <div>
             <span class="has-text-weight-semibold">
               ${!is_public && user && user_id === user.id
-                ? 'You'
+                ? 'Vous'
                 : username || twitter_username
                   ? html`<a href="${`/${twitter_username ? `twitter/${twitter_username}` : username}`}">${fullname}</a>`
                   : anonymousName}

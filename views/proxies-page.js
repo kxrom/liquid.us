@@ -21,11 +21,11 @@ module.exports = (state, dispatch) => {
         ` : ''}
         <div class="columns is-variable is-5">
           <div class="column">
-            <h3 class="title is-5">Add Proxy</h3>
+            <h3 class="title is-5">Ajout de procurations</h3>
             ${proxySearch(state, dispatch)}
           </div>
           <div class="column">
-            <h3 class="title is-5">Your Proxies</h3>
+            <h3 class="title is-5">Vos procurations</h3>
             ${proxies.length ? html`
               <p>The highest ranked gets your extra vote. If your 1st choice doesn't vote, it goes to your 2nd, then 3rd, and on.</p>
             ` : ''}
@@ -35,13 +35,13 @@ module.exports = (state, dispatch) => {
                 ? proxiesTable(state, dispatch)
                 : html`
                   <div class="content">
-                    <p>You don't have any proxies yet.</p>
+                    <p>Vous n'avez pas encore de procurations.</p>
                     <p>
-                      <span>${APP_NAME} lets you pick <strong>anyone</strong> to represent you.</span>
+                      <span>${APP_NAME} vous permet de choisir n'importe qui pour vous représenter. Vous pouvez les modifier à tout moment, et vous pouvez toujours voter directement sur les projets de loi.</span>
                       You can change at anytime, and you can always
                       override them and vote directly on bills.
                     </p>
-                    <p>For any item that you don't vote on, one of your proxies get an additional vote. This ensures that your values are still represented, even when you don't have the time to look into all the issues.</p>
+                    <p>Pour toute proposition sur laquelle vous ne votez pas, l'une de vos procurations obtient un vote supplémentaire. Cela garantit que votre opinion soit toujours représentée, même si vous n'avez pas le temps d'examiner toutes les questions.</p>
                   </div>
                 `}
           </div>

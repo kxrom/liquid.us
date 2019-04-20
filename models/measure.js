@@ -14,7 +14,7 @@ module.exports = (event, state) => {
             loading: { ...state.loading, page: !state.browser, measures: true },
             location: {
               ...state.location,
-              title: 'Legislation',
+              title: 'Législation',
               ogImage: query.legislature && query.legislature.length === 2 && `${ASSETS_URL}/legislature-images/${query.legislature}.png`
             },
           }, fetchMeasures({ hide_direct_votes: state.cookies.hide_direct_votes, ...state.location.query }, state.user)]
@@ -54,10 +54,10 @@ module.exports = (event, state) => {
             loading: { ...state.loading, page: true },
             location: {
               ...state.location,
-              title: 'Proposed Legislation',
+              title: 'Vos propositions',
             },
           }, combineEffects([
-            changePageTitle('Proposed Legislation'),
+            changePageTitle('Vos propositions'),
             fetchUserMeasures(state.user)
           ])]
         default:

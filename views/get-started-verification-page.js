@@ -8,7 +8,7 @@ module.exports = ({ error, loading, forms: { verification: formData = {} }, user
         ${!user ? signupMsg() : ''}
         ${user && user.verified ? alreadyVerifiedMsg() : ''}
         <div class="content">
-          <h2 class="subtitle">Verify your identity</h2>
+          <h2 class="subtitle">Vérifiez votre identité</h2>
           <p>Verify your phone number to make sure your reps know you are their constituent.</p>
           <p>This also lets you create your own profile page, so you can start representing other people and increase your voting power.</p>
         </div>

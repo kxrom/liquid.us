@@ -51,7 +51,7 @@ module.exports = ({ cookies, error, loading, location, profiles = {} }, dispatch
             </div>
           </div>
         ` : []}
-        <h1 class="title">Sign in</h1>
+        <h1 class="title">Se connecter</h1>
         <div class="level">
           <div class="level-item has-text-centered">
             <form onsubmit="${handleForm(dispatch, { type: 'session:signIn' })}" class="box" method="POST">
@@ -81,7 +81,7 @@ module.exports = ({ cookies, error, loading, location, profiles = {} }, dispatch
                   ${error ? html`<p class="help is-danger">${error.message}</p>` : ''}
                 </div>
                 <div class="control">
-                  <button class="${`button is-primary ${loading.signIn ? 'is-loading' : ''}`}" disabled=${loading.signIn} type="submit"><strong>Sign in</strong></button>
+                  <button class="${`button is-primary ${loading.signIn ? 'is-loading' : ''}`}" disabled=${loading.signIn} type="submit"><strong>Se connecter</strong></button>
                 </div>
               </div>
             </form>

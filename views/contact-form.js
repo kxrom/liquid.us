@@ -31,7 +31,7 @@ const contactWidgetButton = (state, dispatch) => {
         <span class="icon is-small">
           <i class="fa fa-comment"></i>
         </span>
-        <span>Help</span>
+        <span>Aide</span>
       </a>
     </p>
   `

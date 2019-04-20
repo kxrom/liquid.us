@@ -25,7 +25,7 @@ module.exports = (event, state) => {
           if (state.location.query.ph) {
             return [state, updatePhoneNumber(atob(state.location.query.ph), state.user)]
           }
-          return [{ ...state, location: { ...state.location, title: 'Join' } }, combineEffects([
+          return [{ ...state, location: { ...state.location, title: 'Rejoindre' } }, combineEffects([
             fetchMetrics,
             state.cookies.proxying_user_id && fetchProxyingProfile({ id: state.cookies.proxying_user_id }),
           ])]
@@ -33,7 +33,7 @@ module.exports = (event, state) => {
           if (state.user) return [state, redirect('/')]
           return [{
             ...state,
-            location: { ...state.location, title: 'Sign in' }
+            location: { ...state.location, title: 'Se connecter' }
           }, state.cookies.proxying_user_id && fetchProxyingProfile({ id: state.cookies.proxying_user_id })]
         case '/sign_in/verify':
           if (state.user) return [state, redirect('/')]
@@ -41,7 +41,7 @@ module.exports = (event, state) => {
             return [{
               ...state,
               loading: { ...state.loading, page: true },
-              location: { ...state.location, title: 'Sign in' },
+              location: { ...state.location, title: 'Se connecter' },
             }, verifyOTP({
               totp: state.location.query.totp,
               device_id: state.cookies.device_id,
@@ -49,7 +49,7 @@ module.exports = (event, state) => {
               redirect_to: state.cookies.redirect_to || '/get_started',
             })]
           }
-          return [{ ...state, location: { ...state.location, title: 'Sign in' } }, refreshPageWhenAuthed]
+          return [{ ...state, location: { ...state.location, title: 'Se connecter' } }, refreshPageWhenAuthed]
         case '/sign_out':
           return [{ ...state, loading: { page: true }, user: null }, signOut(state.user)]
         default:
