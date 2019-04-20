@@ -35,17 +35,13 @@ module.exports = (state, dispatch) => {
                 ? proxiesTable(state, dispatch)
                 : html`
                   <div class="content">
+                    <p>You don't have any proxies yet.</p>
                     <p>
-                      You don't have any proxies yet.
-                    </p>
-                    <p>
-                      ${APP_NAME} lets you pick <strong>anyone</strong> to
-                      represent you. You can change at anytime, and you can always
+                      <span>${APP_NAME} lets you pick <strong>anyone</strong> to represent you.</span>
+                      You can change at anytime, and you can always
                       override them and vote directly on bills.
                     </p>
-                    <p>
-                      For any item that you don't vote on, one of your proxies get an additional vote. This ensures that your values are still represented, even when you don't have the time to look into all the issues.
-                    </p>
+                    <p>For any item that you don't vote on, one of your proxies get an additional vote. This ensures that your values are still represented, even when you don't have the time to look into all the issues.</p>
                   </div>
                 `}
           </div>
